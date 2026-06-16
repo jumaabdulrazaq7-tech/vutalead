@@ -1,5 +1,7 @@
 import './App.css';
 
+const logoUrl = 'https://raw.githubusercontent.com/jumaabdulrazaq7-tech/vutalead.com/main/images/logo.png';
+
 const services = [
   {
     title: 'Website Development',
@@ -67,12 +69,16 @@ function CheckIcon() {
   );
 }
 
+function LogoMark() {
+  return <img className="vl-brand-mark" src={logoUrl} alt="Vutalead logo" style={{ objectFit: 'contain', background: '#fff', padding: 2 }} />;
+}
+
 function App() {
   return (
     <div className="vl-page">
       <header className="vl-nav">
         <a className="vl-brand" href="#top" aria-label="Vutalead home">
-          <span className="vl-brand-mark">V</span>
+          <LogoMark />
           <span>Vutalead</span>
         </a>
         <nav className="vl-nav-links" aria-label="Primary navigation">
@@ -255,7 +261,7 @@ function App() {
       </main>
 
       <footer className="vl-footer">
-        <div className="vl-brand"><span className="vl-brand-mark">V</span><span>Vutalead</span></div>
+        <div className="vl-brand"><LogoMark /><span>Vutalead</span></div>
         <span>Digital Solutions for Growing Businesses.</span>
       </footer>
     </div>
